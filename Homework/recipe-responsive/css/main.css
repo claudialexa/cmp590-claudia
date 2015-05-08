@@ -48,8 +48,19 @@
 }
 
 .help {
-  background: #FFFFFF;
-  text-align: center;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 5px;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .main {
@@ -67,6 +78,14 @@
 .img-help {
     text-align: center;
     max-width:100%;
+    padding-bottom: 10px;
+}
+
+.img-process {
+    text-align: center;
+    max-width:100%;
+    padding-bottom: 10px;
+    padding-right: 10px;
 }
 
 
@@ -132,19 +151,7 @@ img.center {
     width: 100%
 }
 
-img.help {
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 188px;
-    flex-direction: row;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   margin-bottom: 10px;
-}
 
 table {
     font-family:Arial, Helvetica, sans-serif;
@@ -196,7 +203,104 @@ table td {
    Media Queries
    ========================================================================== */
 
-@media (min-width: 400px) {
+
+@media (max-width: 2000px) {
+
+  .aside { flex: 1 auto; }
+
+  .main    { flex: 1 auto; }
+
+  .help    { 
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: center;
+  }
+
+  .instructions {
+    flex-direction: row;
+  }
+
+  .description {
+    flex-direction: row;
+  }
+
+  p.social {
+    text-align: right;
+  }
+
+  p.tags {
+  text-align: left;
+  }
+
+  p.description {
+  text-align: left;
+  }
+
+  table.left {
+    width: 25%;
+  }
+
+  table.right {
+    width: 73%;
+  }
+
+  img.process {
+    margin-right: 10px;
+  }
+
+
+
+}
+
+
+
+@media (max-width: 800px) {
+
+  .aside { flex: 1 auto; }
+
+  .main    { flex: 1 auto; }
+
+  .help    { 
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: center;
+  }
+
+  p.social {
+    text-align: right;
+  }
+
+  p.tags {
+  text-align: center;
+  }
+
+  p.description {
+  text-align: center;
+  }
+
+  h1 {
+    text-align: left;}
+
+  .instructions {
+    flex-direction: column;
+  }
+
+  img.process {
+    margin-right: 15px;
+  }
+
+
+
+}
+
+@media (max-width: 500px) {
+
+  .help {
+    flex-direction: row;
+    margin: 2px;
+  }
 
   p.social {
     text-align: center;
@@ -206,8 +310,8 @@ table td {
     text-align: center;
   }
   
-  .instructions {
-    flex-direction: column;
+ .instructions {
+    flex: 1 auto;     
   }
 
   p.tags {
@@ -228,66 +332,17 @@ table td {
 
   img.help {
     width: 30%;
+    height: 100px;
+  }
+
+  img.process {
+    width: 40%;
+    height: 120px;
+    margin: 10px;
   }
 
 }
 
-@media all and (min-width: 600px) {
-
-  .aside { flex: 1 auto; }
-
-  p.social {
-    text-align: right;}
-
-  p.tags {
-  text-align: center;
-  }
-
-  p.description {
-  text-align: center;
-  }
-
-  h1 {
-    text-align: left;}
-
-  .instructions {
-    flex-direction: column;
-  }
-
-
-}
-
-@media all and (min-width: 800px) {
-
-  .main    { flex: 1 0px; }
-
-  .help    { flex: 1 0px; }
-
-  .instructions {
-    flex-direction: row;
-  }
-
-  .description {
-    flex-direction: row;
-  }
-
-  p.tags {
-  text-align: left;
-  }
-
-  p.description {
-  text-align: left;
-  }
-
-  table.left {
-    width: 25%;
-  }
-
-  table.right {
-    width: 73%;
-  }
-
-}
 
 /* ==========================================================================
    Print styles

@@ -155,17 +155,14 @@ a.contact {
 }
 
 .box-item {
-  background: #fff;
   padding: 7px;
   width: 400px;
   height: 100%;
   margin-top: 10px;
   line-height: 1.5em;
-  color: white;
   text-align: left;
-
-  border-color: #666;
 }
+
 
 img.sample {
   width: 100%;
@@ -175,13 +172,14 @@ img.sample {
 
 #menu li {
   display:inline-block;
-  margin: 10px;
+  margin-right: 0px;
   color: #2C3E50;
   -webkit-border-radius: 10px;
             border-radius: 10px;
   text-transform: uppercase;
   font-size: 1.2em;
   font-family: 'Abel', sans-serif; 
+
 }
 
 #menu li.active{
@@ -215,18 +213,17 @@ img.sample {
   z-index: 300;
   width: 100%;
   padding-bottom: 1em;
+  padding-top: 1em;
   margin:0;
   display: block;
   background: #6DBCDB;
   opacity: .9;
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
 }
 
-.twitter-share-button{
-  position: fixed;
-  z-index: 99;
-  right: 149px;
-  top: 9px;
-}
+
 #download{
   margin: 10px 0 0 0;
   padding: 15px 10px;
@@ -295,59 +292,17 @@ img.sample {
   display:inline-block;
   position:relative;
 }
-#examplesList{
-  display:none;
-  background: #282828;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  padding: 20px;
-  float: left;
-  position: absolute;
-  bottom: 29px;
-  right: 0;
-  width:638px;
-  text-align:left;
-}
-#examplesList ul{
-  padding:0;
-}
-#examplesList ul li{
-  display:block;
-  margin: 5px 0;
-}
-#examplesList ul li a{
-  color: #BDBDBD;
-  margin:0;
-}
-#examplesList ul li a:hover{
-  color: #f2f2f2;
-}
-#examplesList .column{
-  float: left;
-  margin: 0 20px 0 0;
-}
-#examplesList h3{
-  color: #f2f2f2;
-  font-size: 1.2em;
-  margin: 0 0 15px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
-  padding: 0 0 5px 0;
+
+#mobile {
+
+  width: 100%
+  height: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  display: block;
 }
 
-
-
-/* Demos Menu
- * --------------------------------------- */
- #demosMenu{
-  position:fixed;
-  bottom: 10px;
-  right:10px;
-  z-index: 999;
- }
 
 /* ==========================================================================
    Helper classes
@@ -373,35 +328,92 @@ img.sample {
    ========================================================================== */
 
 
-/* Mobile */
-@media all and (min-width: 400px) {
-  h1{
-    font-size: 4em;
-  }
-  .box {
-    flex-direction: column;
-    padding: 0px;
-    width:100%;
-  }
+/* Wide */
+@media (min-width: 768px) {
+  #menu{
+  height: 40px;
+}
 
+#menu li {
+  margin-right: 10px;
 
 }
+
+#mobile {
+  display: none;
+}
+
+.desktop-visible {
+  display: block;
+}
+
+}
+
 /* Intermediate */
-@media all and (min-width: 800px) {
-  h1{
+@media (max-width: 850px) {
+
+h1{
     font-size: 6em;
   }
 
-  .box {
+.box {
     flex-direction: row;
     padding: 0px;
     width:50%
   }
 
+#menu{
+  height: 80px;
+}
+
+#menu li {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  margin-right: 10px;  
+}
+
+#mobile{
+  display: none;
 
 }
-/* Wide */
-@media only screen and (min-width: 1140px) {
+
+.desktop-visible {
+  display: block;
+}
+
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+
+h1{
+    font-size: 4em;
+    padding-top: 1em;
+  }
+
+.box {
+    flex-direction: column;
+    padding: 0px;
+    width:100%;
+  }
+
+#menu{
+  height: 75px;
+}
+
+#menu li {
+  margin-right: 2px;
+}
+
+.desktop-visible {
+  display: none;
+}
+
+#mobile {
+display: block;
+}
+
 
 }
 
