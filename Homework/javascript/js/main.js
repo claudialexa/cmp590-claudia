@@ -74,6 +74,18 @@
 //  var total = multiply(1,2,3,4);
 //  console.log(total);
 
+// // pig latin
+
+// function translate(){ 
+// 	var string= "dog"; 
+// 	var one= string.charAt(0);
+// 	var two= 'ay'; 
+// 	var three= string.replace(one,'') + one + two; 
+// 	return three;
+// }
+
+// console.log(translate());
+
 
 // // video reverse
 
