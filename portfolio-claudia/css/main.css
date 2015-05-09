@@ -80,15 +80,20 @@ h1{
   color: #E74C3C;
 }
 
-h2 a{
+h2 {
   font-size: 1.5em;
   font-family: 'Abel', sans-serif; font-weight: 400;
   color: #6DBCDB;
   margin-bottom: 14px;
 }
 
+h2 a{
+  font-family: 'Abel', sans-serif; font-weight: 400;
+  color: #6DBCDB;
+  margin-bottom: 14px;
+}
+
 h2 a:hover{
-  font-size: 1.5em;
   font-family: 'Abel', sans-serif; font-weight: 400;
   color: #2C3E50;
   margin-bottom: 14px;
@@ -149,7 +154,7 @@ a.contact {
   display: flex;
   
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   border-color: #666;
   align-items: stretch;
 }
@@ -160,7 +165,7 @@ a.contact {
   height: 100%;
   margin-top: 10px;
   line-height: 1.5em;
-  text-align: left;
+  text-align: center;
 }
 
 
